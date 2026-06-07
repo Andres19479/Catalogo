@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Articulos Publicitarios | Suministros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="encabezado-principal">
+        <div class="contenedor-header">
+            <div class="textos-header">
+                <h1>Articulos Publicitarios</h1>
+                <p>Suministros y Artículos Promocionales para tu Negocio</p>
+            </div>
+            <button id="btn-abrir-carrito" class="btn-carrito-header">
+                🛒 Cotización (<span id="contador-carrito">0</span>)
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="catalogo">
+            <div class="contenedor-filtros">
+                <div id="filtros" class="filtros-scroll">
+                    <button class="activo">Todos</button>
+                    <button>Bolígrafos</button>
+                    <button>Cuadernos</button>
+                    <button>Tecnología</button>
+                    <button>Termos</button>
+                    <button>Vasos y Mugs</button>
+                    <button>Bolsos</button>
+                    <button>Ecológicos</button>
+                    <button>Llaveros</button>
+                    <button>Vinos</button>
+                    <button>General</button>
+                </div>
+            </div>
+            
+            <div id="lista-productos">
+                <!-- Los productos se inyectarán aquí con JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal del Carrito -->
+    <div id="ventana-carrito" class="modal-oculto">
+        <div class="contenido-modal modal-carrito">
+            <span id="btn-cerrar-carrito" class="cerrar">&times;</span>
+            <h2>📋 Tu Lista de Cotización</h2>
+            <ul id="lista-carrito">
+                <li class="carrito-vacio">Tu lista está vacía. ¡Agrega algunos productos!</li>
+            </ul>
+            <p class="nota-carrito"><em>* Envía esta lista por WhatsApp para recibir tus precios especiales al por mayor.</em></p>
+            <button id="btn-whatsapp">Enviar a WhatsApp 💬</button>
+        </div>
+    </div>
+
+    <!-- Modal de Detalles del Producto -->
+    <div id="ventana-detalles" class="modal-oculto">
+        <div class="contenido-modal detalles-modal">
+            <span id="btn-cerrar-detalles" class="cerrar">&times;</span>
+            <div class="layout-detalles">
+                
+                <!-- Carrusel Inteligente -->
+                <div id="contenedor-slider-detalles" class="slider-detalles"></div>
+
+                <div class="info-detalles-texto">
+                    <h2 id="titulo-detalles">Nombre del Producto</h2>
+                    <p class="categoria-etiqueta" id="categoria-detalles">Categoría</p>
+                    <div class="descripcion-box">
+                        <p id="descripcion-detalles">Descripción completa...</p>
+                        <div id="contenedor-colores"></div>
+                        <div id="contenedor-marcaje"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contenedor-toast"></div>
+    <script src="app.js"></script>
+</body>
+</html>
